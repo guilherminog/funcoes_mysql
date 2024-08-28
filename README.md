@@ -93,3 +93,28 @@
 |                            | `ADDDATE(date, INTERVAL expr unit)`                 | Outro nome para `DATE_ADD`.                                                   |
 |                            | `SUBDATE(date, INTERVAL expr unit)`                 | Outro nome para `DATE_SUB`.                                                   |
 
+
+## Funções de Condição
+
+| **Função/Comando**     | **O que faz**                                                                      | **Exemplo de Uso**                                                         |
+|------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| `IFNULL(expr1, expr2)` | Retorna `expr2` se `expr1` for `NULL`, caso contrário, retorna `expr1`.            | `SELECT IFNULL(Discount, 0) FROM orders;`                                   |
+| `IS NULL`              | Verifica se um valor é `NULL`. Retorna `TRUE` se for `NULL`.                       | `SELECT * FROM orders WHERE Discount IS NULL;`                              |
+| `IS NOT NULL`          | Verifica se um valor não é `NULL`. Retorna `TRUE` se não for `NULL`.               | `SELECT * FROM orders WHERE Discount IS NOT NULL;`                          |
+| `NULLIF(expr1, expr2)` | Retorna `NULL` se `expr1` for igual a `expr2`, caso contrário, retorna `expr1`.    | `SELECT NULLIF(Quantity, 0) FROM orders;`                                   |
+| `CASE ... WHEN ... THEN ... ELSE ... END` | Executa instruções condicionais, similar ao `switch-case`.                         | `SELECT CASE WHEN Discount > 10 THEN 'High' ELSE 'Low' END FROM orders;`    |
+| `IF(expr1, expr2, expr3)` | Retorna `expr2` se `expr1` for verdadeiro, caso contrário, retorna `expr3`.       | `SELECT IF(Discount > 10, 'High', 'Low') FROM orders;`                      |
+| `COALESCE(expr1, expr2, ...)` | Retorna o primeiro valor não-`NULL` na lista de expressões.                   | `SELECT COALESCE(Discount, SpecialDiscount, 0) FROM orders;`                |
+
+---
+### Uma breve explicação sobre condições.
+
+Explicações Adicionais:
+IFNULL(expr1, expr2): Ideal para substituir valores NULL por um valor padrão.
+IS NULL e IS NOT NULL: Útil para filtrar dados com ou sem valores NULL.
+NULLIF(expr1, expr2): Usado para evitar a divisão por zero, retornando NULL em vez do divisor.
+CASE ... WHEN ... THEN ... ELSE ... END: Uma estrutura condicional poderosa que permite múltiplas condições.
+IF(expr1, expr2, expr3): Similar a um IF tradicional em linguagens de programação.
+COALESCE(expr1, expr2, ...): Útil para selecionar o primeiro valor disponível em uma lista de possíveis valores, evitando NULL.
+
+---
