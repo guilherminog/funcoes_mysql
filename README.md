@@ -1,3 +1,5 @@
+## Funções mais utilizadas no MySQL
+
 | **Categoria**               | **Função**                                           | **Descrição**                                                                 |
 |-----------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------|
 | **Funções de Aritmética**   | `ABS(x)`                                            | Retorna o valor absoluto de x.                                                |
@@ -53,3 +55,41 @@
 |                             | `BIT_AND(expr)`                                     | Realiza uma operação bitwise AND entre todos os bits em expr.                 |
 |                             | `BIT_OR(expr)`                                      | Realiza uma operação bitwise OR entre todos os bits em expr.                  |
 |                             | `BIT_XOR(expr)`                                     | Realiza uma operação bitwise XOR entre todos os bits em expr.                 |
+
+
+
+
+
+## Funções de Datas
+
+| **Categoria**              | **Função**                                           | **Descrição**                                                                 |
+|----------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------|
+| **Data e Hora**            | `NOW()`                                             | Retorna a data e hora atuais.                                                 |
+|                            | `CURDATE()`                                         | Retorna a data atual (sem a hora).                                            |
+|                            | `CURTIME()`                                         | Retorna a hora atual.                                                         |
+|                            | `UTC_DATE()`                                        | Retorna a data atual em UTC.                                                  |
+|                            | `UTC_TIME()`                                        | Retorna a hora atual em UTC.                                                  |
+|                            | `UTC_TIMESTAMP()`                                   | Retorna a data e hora atuais em UTC.                                          |
+| **Extração de Partes**      | `YEAR(date)`                                        | Retorna o ano da data.                                                        |
+|                            | `MONTH(date)`                                       | Retorna o mês da data.                                                        |
+|                            | `DAY(date)`                                         | Retorna o dia do mês da data.                                                 |
+|                            | `HOUR(time)`                                        | Retorna a hora do tempo.                                                      |
+|                            | `MINUTE(time)`                                      | Retorna os minutos do tempo.                                                  |
+|                            | `SECOND(time)`                                      | Retorna os segundos do tempo.                                                 |
+|                            | `WEEK(date)`                                        | Retorna a semana do ano para a data.                                          |
+|                            | `DAYOFWEEK(date)`                                   | Retorna o dia da semana (1 para domingo, 2 para segunda, etc.).               |
+|                            | `DAYOFYEAR(date)`                                   | Retorna o dia do ano.                                                         |
+| **Manipulação de Datas**    | `DATE_ADD(date, INTERVAL expr unit)`                | Adiciona um intervalo de tempo à data.                                        |
+|                            | `DATE_SUB(date, INTERVAL expr unit)`                | Subtrai um intervalo de tempo da data.                                        |
+|                            | `DATEDIFF(date1, date2)`                            | Retorna a diferença em dias entre duas datas.                                 |
+|                            | `TIMESTAMPDIFF(unit, datetime1, datetime2)`         | Retorna a diferença entre dois valores datetime em um determinado intervalo.  |
+| **Formatação de Datas**     | `DATE_FORMAT(date, format)`                         | Formata a data de acordo com o formato especificado.                          |
+|                            | `STR_TO_DATE(str, format)`                          | Converte uma string para uma data usando o formato especificado.              |
+| **Conversão de Datas**      | `UNIX_TIMESTAMP()`                                  | Retorna a data/hora atual como um timestamp Unix.                             |
+|                            | `FROM_UNIXTIME(unix_timestamp)`                     | Converte um timestamp Unix para uma data/hora.                                |
+|                            | `CAST(expr AS DATE)`                                | Converte um valor para o tipo de dados DATE.                                  |
+|                            | `CAST(expr AS DATETIME)`                            | Converte um valor para o tipo de dados DATETIME.                              |
+| **Outras Funções Úteis**    | `LAST_DAY(date)`                                    | Retorna o último dia do mês para a data dada.                                 |
+|                            | `ADDDATE(date, INTERVAL expr unit)`                 | Outro nome para `DATE_ADD`.                                                   |
+|                            | `SUBDATE(date, INTERVAL expr unit)`                 | Outro nome para `DATE_SUB`.                                                   |
+
