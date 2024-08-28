@@ -110,11 +110,11 @@
 ### Uma breve explicação sobre condições.
 
 Explicações Adicionais:
-IFNULL(expr1, expr2): Ideal para substituir valores NULL por um valor padrão.
-IS NULL e IS NOT NULL: Útil para filtrar dados com ou sem valores NULL.
-NULLIF(expr1, expr2): Usado para evitar a divisão por zero, retornando NULL em vez do divisor.
-CASE ... WHEN ... THEN ... ELSE ... END: Uma estrutura condicional poderosa que permite múltiplas condições.
-IF(expr1, expr2, expr3): Similar a um IF tradicional em linguagens de programação.
-COALESCE(expr1, expr2, ...): Útil para selecionar o primeiro valor disponível em uma lista de possíveis valores, evitando NULL.
+- IFNULL(expr1, expr2): Ideal para substituir valores NULL por um valor padrão.
+- IS NULL e IS NOT NULL: Útil para filtrar dados com ou sem valores NULL.
+- NULLIF(expr1, expr2): Usado para evitar a divisão por zero, retornando NULL em vez do divisor.
+- CASE ... WHEN ... THEN ... ELSE ... END: Uma estrutura condicional poderosa que permite múltiplas condições.
+- IF(expr1, expr2, expr3): Similar a um IF tradicional em linguagens de programação.
+- COALESCE(expr1, expr2, ...): Útil para selecionar o primeiro valor disponível em uma lista de possíveis valores, evitando NULL.
 
 ---
